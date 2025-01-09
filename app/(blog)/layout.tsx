@@ -71,14 +71,8 @@ export default async function RootLayout({
         <section className="min-h-screen">
           <AlertBanner />
           <main>{children}</main>
-          <footer className="bg-accent-1 border-accent-2 border-t">
-            <div className="container mx-auto px-5">
-              {footer.length > 0 ? (
-                <PortableText
-                  className="prose-sm text-pretty bottom-0 w-full max-w-none bg-white py-12 text-center md:py-20"
-                  value={footer as PortableTextBlock[]}
-                />
-              ) : (
+          <footer className="bg-gray-800 border-accent-2 border-t">
+            <div className="container mx-auto">
                 <div className="flex flex-col items-center py-10 bg-gray-800 text-white">
                 <h3 className="mb-4 text-center text-lg font-medium leading-tight tracking-tighter lg:text-xl">
                   Your go-to blog for content strategies and lifestyle insights.
@@ -101,8 +95,6 @@ export default async function RootLayout({
                   © 2025 The Lifestyle Log. All rights reserved.
                 </p>
               </div>
-              
-              )}
             </div>
           </footer>
         </section>
